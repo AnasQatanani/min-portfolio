@@ -1,3 +1,4 @@
+/* Definiera globala variabler för färgschema */
 :root {
     --primary-color: #3498db;
     --secondary-color: #2c3e50;
@@ -6,6 +7,7 @@
     --text-color: #34495e;
 }
 
+/* Grundläggande stilar för body */
 body {
     font-family: 'Roboto', Arial, sans-serif;
     line-height: 1.6;
@@ -15,12 +17,14 @@ body {
     color: var(--text-color);
 }
 
+/* Stilar för header */
 header {
     background-color: var(--secondary-color);
     padding: 1rem;
     box-shadow: 0 2px 5px rgba(0,0,0,0.1);
 }
 
+/* Navigeringsmeny */
 nav ul {
     list-style-type: none;
     padding: 0;
@@ -43,6 +47,7 @@ nav ul li a:hover {
     color: var(--primary-color);
 }
 
+/* Huvudinnehåll */
 main {
     padding: 2rem;
     max-width: 1000px;
@@ -52,6 +57,7 @@ main {
     border-radius: 8px;
 }
 
+/* Rubrikstilar */
 h1, h2 {
     color: var(--secondary-color);
 }
@@ -68,6 +74,7 @@ h2 {
     margin-top: 2rem;
 }
 
+/* Bildhantering */
 img {
     max-width: 100%;
     height: auto;
@@ -76,6 +83,7 @@ img {
     box-shadow: 0 4px 8px rgba(0,0,0,0.1);
 }
 
+/* Profilbild */
 .profile-image {
     width: 200px;
     height: 200px;
@@ -86,6 +94,7 @@ img {
     border: 3px solid var(--primary-color);
 }
 
+/* Footer */
 footer {
     background-color: var(--secondary-color);
     color: #fff;
