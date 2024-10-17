@@ -1,45 +1,63 @@
-/* Definiera globala variabler för färgschema */
+/* Grundstilar och typografi */
 :root {
     --primary-color: #3498db;
     --secondary-color: #2c3e50;
-    --accent-color: #e74c3c;
-    --background-color: #ecf0f1;
-    --text-color: #34495e;
+    --text-color: #333;
+    --background-color: #f4f4f4;
 }
 
-/* Grundläggande stilar för body */
-body {
-    font-family: 'Roboto', Arial, sans-serif;
-    line-height: 1.6;
+* {
+    box-sizing: border-box;
     margin: 0;
     padding: 0;
-    background-color: var(--background-color);
-    color: var(--text-color);
 }
 
-/* Stilar för header */
+body {
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+    line-height: 1.6;
+    color: var(--text-color);
+    background-color: var(--background-color);
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-family: 'Poppins', sans-serif;
+    font-weight: 600;
+}
+
+/* Layout med CSS Grid */
+body {
+    display: grid;
+    grid-template-areas:
+        "header"
+        "main"
+        "footer";
+    min-height: 100vh;
+}
+
+header { grid-area: header; }
+main { grid-area: main; }
+footer { grid-area: footer; }
+
+/* Sidhuvud och navigation */
 header {
     background-color: var(--secondary-color);
     padding: 1rem;
-    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
 }
 
-/* Navigeringsmeny */
 nav ul {
-    list-style-type: none;
-    padding: 0;
     display: flex;
     justify-content: center;
+    list-style-type: none;
 }
 
 nav ul li {
-    margin: 0 15px;
+    margin: 0 1rem;
 }
 
 nav ul li a {
-    color: #fff;
+    color: white;
     text-decoration: none;
-    font-weight: 500;
+    font-size: 1rem;
     transition: color 0.3s ease;
 }
 
@@ -50,89 +68,110 @@ nav ul li a:hover {
 /* Huvudinnehåll */
 main {
     padding: 2rem;
-    max-width: 1000px;
-    margin: 2rem auto;
-    background-color: #fff;
-    box-shadow: 0 0 20px rgba(0,0,0,0.1);
-    border-radius: 8px;
+    max-width: 1200px;
+    margin: 0 auto;
 }
 
-/* Rubrikstilar */
-h1, h2 {
-    color: var(--secondary-color);
-}
-
-h1 {
-    font-size: 2.5rem;
-    margin-bottom: 1.5rem;
-    border-bottom: 2px solid var(--primary-color);
-    padding-bottom: 0.5rem;
-}
-
-h2 {
-    font-size: 1.8rem;
-    margin-top: 2rem;
-}
-
-/* Bildhantering */
-img {
-    max-width: 100%;
-    height: auto;
-    margin-bottom: 1rem;
-    border-radius: 8px;
-    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
-}
-
-/* Profilbild */
-.profile-image {
-    width: 200px;
-    height: 200px;
-    object-fit: cover;
-    border-radius: 50%;
-    margin: 0 auto 1rem;
-    display: block;
-    border: 3px solid var(--primary-color);
-}
-
-/* Footer */
-footer {
-    background-color: var(--secondary-color);
-    color: #fff;
+.hero {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
     text-align: center;
-    padding: 1rem;
-    margin-top: 2rem;
 }
 
-/* Projekt sektion */
-.project {
-    margin-bottom: 2rem;
-    padding: 1rem;
-    background-color: #f8f9fa;
-    border-radius: 8px;
-    transition: transform 0.3s ease;
+.profile-image {
+    border-radius: 50%;
+    margin: 2rem 0;
 }
 
-.project:hover {
-    transform: translateY(-5px);
-}
-
-.project img {
-    width: 100%;
-    max-height: 300px;
-    object-fit: cover;
-}
-
-/* Knappar */
 .btn {
     display: inline-block;
-    padding: 10px 20px;
     background-color: var(--primary-color);
-    color: #fff;
+    color: white;
+    padding: 0.5rem 1rem;
     text-decoration: none;
     border-radius: 5px;
     transition: background-color 0.3s ease;
 }
 
 .btn:hover {
+    background-color: #2980b9;
+}
+
+/* Sidfot */
+footer {
     background-color: var(--secondary-color);
+    color: white;
+    text-align: center;
+    padding: 1rem;
+    margin-top: auto;
+}
+
+/* Responsiv design */
+@media screen and (max-width: 768px) {
+    nav ul {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    nav ul li {
+        margin: 0.5rem 0;
+    }
+
+    .hero h1 {
+        font-size: 2rem;
+    }
+}
+
+/* Projektrutnät (för projekt.html) */
+.project-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+    margin-top: 2rem;
+}
+
+.project-item {
+    background-color: white;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+}
+
+.project-item:hover {
+    transform: translateY(-5px);
+}
+
+.project-item img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+}
+
+.project-item .content {
+    padding: 1rem;
+}
+
+/* Tillgänglighet */
+.sr-only {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    white-space: nowrap;
+    border-width: 0;
+}
+
+/* Animation (att utökas senare) */
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+.fade-in {
+    animation: fadeIn 1s ease-out;
 }
