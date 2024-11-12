@@ -17,21 +17,32 @@ body {
     line-height: 1.6;
     color: var(--text-color);
     background-color: var(--background-color);
-}
-
-h1, h2, h3, h4, h5, h6 {
-    font-family: 'Poppins', sans-serif;
-    font-weight: 600;
-}
-
-/* Layout med CSS Grid */
-body {
     display: grid;
     grid-template-areas:
         "header"
         "main"
         "footer";
-    min-height: 100vh;
+  /*    min-height: 100vh; */
+}
+
+html, body {
+    height: 100%;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+}
+
+main {
+    flex: 1;
+}
+
+footer {
+    background-color: var(--secondary-color);
+    color: white;
+    text-align: center;
+    padding: 1rem;
 }
 
 header { grid-area: header; }
@@ -82,6 +93,8 @@ main {
 .profile-image {
     border-radius: 50%;
     margin: 2rem 0;
+    max-width: 100%;
+    height: auto;
 }
 
 .btn {
@@ -110,12 +123,12 @@ footer {
 /* Responsiv design */
 @media screen and (max-width: 768px) {
     nav ul {
-        flex-direction: column;
-        align-items: center;
+        flex-direction: row; /* Ensure items are in a row */
+        justify-content: center; /* Center the items */
     }
-
+    
     nav ul li {
-        margin: 0.5rem 0;
+        margin: 0 0.5rem; /* Reduce margin between items */
     }
 
     .hero h1 {
@@ -137,6 +150,7 @@ footer {
     overflow: hidden;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
     transition: transform 0.3s ease;
+    padding: 1.5rem; /* Increase padding for more space */
 }
 
 .project-item:hover {
@@ -151,6 +165,32 @@ footer {
 
 .project-item .content {
     padding: 1rem;
+}
+
+/* Intressen (för Intressen.html) */
+.interests-container {
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    padding: 1.5rem;
+    margin-top: 2rem;
+}
+
+.interests-image {
+    border-radius: 10px;
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+    margin-top: 1rem;
+}
+
+ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+ul li {
+    margin-bottom: 0.5rem;
 }
 
 /* Tillgänglighet */

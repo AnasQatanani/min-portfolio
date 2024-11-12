@@ -8,7 +8,7 @@
     <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
 </head>
 <body>
-    <header>
+    <header data-aos="fade-down" data-aos-duration="1000">
         <nav>
             <ul>
                 <li><a href="index.html">Hem</a></li>
@@ -20,18 +20,26 @@
         </nav>
     </header>
     <main>
-        <main>
-            <h1>Mina Intressen</h1>
+        <h1 data-aos="fade-up" data-aos-duration="1000">Mina Intressen</h1>
+        <div class="interests-container" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="200">
             <ul>
                 <li>Träna</li>
                 <li>Skapa program</li>
                 <li>Favoritmat: Saftig Köttbit</li>
                 <li>Favoritartist: Beethoven</li>
             </ul>
-            <img src="\\wsl.localhost\Ubuntu\home\anas\vscode\web-development\min-portfolio\images\pro+working+out.jpg" alt="Mina intressen" class="interests-image"width="300" height="500">
-        </main>    </main>
+            <img src="\\wsl.localhost\Ubuntu\home\anas\vscode\web-development\min-portfolio\images\pro+working+out.jpg" alt="Mina intressen" class="interests-image" data-aos="zoom-in" data-aos-duration="1000" data-aos-delay="400">
+        </div>
+    </main>
     <footer>
         <p>&copy; 2024 Anas Q. Alla rättigheter förbehållna.</p>
     </footer>
+
+    <!-- Länk till AOS JavaScript-fil -->
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script>
+        // Initialize AOS
+        AOS.init();
+    </script>
 </body>
 </html>

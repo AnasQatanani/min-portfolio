@@ -8,7 +8,7 @@
     <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
 </head>
 <body>
-    <header>
+    <header data-aos="fade-down" data-aos-duration="1000">
         <nav>
             <ul>
                 <li><a href="index.html">Hem</a></li>
@@ -20,15 +20,22 @@
         </nav>
     </header>
     <main>
-        <main>
-            <h1>Om Mig</h1>
-            <img src=\\wsl.localhost\Ubuntu\home\anas\vscode\web-development\min-portfolio\images\pro-facepic.jpg width="680" height="680" alt="Profilbild" class="profile-image">
-            <p>Jag är en 24-årig programerare med ett stort intresse för försjälning.<br>
-                 Min bakgrund inom försjälning har gett mig en solid grund för att tackla utmaningar som entreprenör.</p>
-        </main>
+        <h1 data-aos="fade-up" data-aos-duration="1000">Om Mig</h1>
+        <img src="\\wsl.localhost\Ubuntu\home\anas\vscode\web-development\min-portfolio\images\pro-facepic.jpg" width="680" height="680" alt="Profilbild" class="profile-image" data-aos="zoom-in" data-aos-duration="1000" data-aos-delay="200">
+        <p data-aos="fade-up" data-aos-duration="1000" data-aos-delay="400">
+            Jag är en 24-årig programerare med ett stort intresse för försjälning.<br>
+            Min bakgrund inom försjälning har gett mig en solid grund för att tackla utmaningar som entreprenör.
+        </p>
     </main>
     <footer>
         <p>&copy; 2024 Anas Q. Alla rättigheter förbehållna.</p>
     </footer>
+
+    <!-- Länk till AOS JavaScript-fil -->
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script>
+        // Initialize AOS
+        AOS.init();
+    </script>
 </body>
 </html>

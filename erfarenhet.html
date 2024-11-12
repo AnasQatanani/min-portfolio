@@ -8,7 +8,7 @@
     <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
 </head>
 <body>
-    <header>
+    <header data-aos="fade-down" data-aos-duration="1000">
         <nav>
             <ul>
                 <li><a href="index.html">Hem</a></li>
@@ -20,27 +20,32 @@
         </nav>
     </header>
     <main>
-        <main>
-            <h1>Erfarenhet</h1>
-            <section>
-                <h2>Arbetslivserfarenhet</h2>
-                <ul>
-                    <li>Reuseit - Key Account Manager (2022-2023)</li>
-                    <li>Nordic Defender - Account Manager (2022-2022)</li>
-                </ul>
-            </section>
-            <section>
-                <h2>Utbildning</h2>
-                <ul>
-                    <li>Account Manager - Sälj & Marknadshögskolan  (2020-2022)</li>
-                    <li>Systemutvecklare - Chas Academy (2023-2025)</li>
-                </ul>
-            </section>
-            <img src="\\wsl.localhost\Ubuntu\home\anas\vscode\web-development\min-portfolio\images\pro-working.jpg" width="480" height="680" alt="Profilbild" class="profile-image">
-        </main>
+        <h1 data-aos="fade-up" data-aos-duration="1000">Erfarenhet</h1>
+        <section data-aos="fade-up" data-aos-duration="1000" data-aos-delay="200">
+            <h2>Arbetslivserfarenhet</h2>
+            <ul>
+                <li>Reuseit - Key Account Manager (2022-2023)</li>
+                <li>Nordic Defender - Account Manager (2022-2022)</li>
+            </ul>
+        </section>
+        <section data-aos="fade-up" data-aos-duration="1000" data-aos-delay="400">
+            <h2>Utbildning</h2>
+            <ul>
+                <li>Account Manager - Sälj & Marknadshögskolan (2020-2022)</li>
+                <li>Systemutvecklare - Chas Academy (2023-2025)</li>
+            </ul>
+        </section>
+        <img src="\\wsl.localhost\Ubuntu\home\anas\vscode\web-development\min-portfolio\images\pro-working.jpg" width="480" height="680" alt="Profilbild" class="profile-image" data-aos="zoom-in" data-aos-duration="1000" data-aos-delay="600">
     </main>
     <footer>
         <p>&copy; 2024 Anas Q. Alla rättigheter förbehållna.</p>
     </footer>
+
+    <!-- Länk till AOS JavaScript-fil -->
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script>
+        // Initialize AOS
+        AOS.init();
+    </script>
 </body>
 </html>

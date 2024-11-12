@@ -11,7 +11,7 @@
 </head>
 <body>
     <!-- Sidhuvud med navigation -->
-    <header>
+    <header data-aos="fade-down" data-aos-duration="1000">
         <nav>
             <ul>
                 <li><a href="index.html">Hem</a></li>
@@ -25,18 +25,29 @@
 
     <!-- Huvudinnehåll -->
     <main>
-        <h1>Välkommen Till Min Portfolio</h1>
+        <h1 data-aos="fade-up" data-aos-duration="1000">Välkommen Till Min Portfolio</h1>
         <!-- Profilbild -->
-        <img src="\\wsl.localhost\Ubuntu\home\anas\vscode\web-development\min-portfolio\images\pro-facepic.jpg" width="680" height="680" alt="Profilbild" class="profile-image">
-        <p>Hej! Jag är Anas, en passionerad programerare. Utforska min portfolio för att lära känna mig bättre och se mina projekt.</p>
+        <img src="\\wsl.localhost\Ubuntu\home\anas\vscode\web-development\min-portfolio\images\pro-facepic.jpg" width="680" height="680" alt="Profilbild" class="profile-image" data-aos="zoom-in" data-aos-duration="1000" data-aos-delay="200">
+        <p data-aos="fade-up" data-aos-duration="1000" data-aos-delay="400">
+            Hej! Jag är Anas, en passionerad programerare. Utforska min portfolio för att lära känna mig bättre och se mina projekt.
+        </p>
         <br>
         <!-- Knapp för att läsa mer -->
-        <a href="om-mig.html" class="btn">Läs mer om mig</a>
+        <a href="om-mig.html" class="btn" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="600">Läs mer om mig</a>
     </main>
 
     <!-- Sidfot -->
     <footer>
         <p>&copy; 2024 Anas Q. Alla rättigheter förbehållna.</p>
     </footer>
+
+    <!-- Länk till extern JavaScript-fil -->
+    <script src="script.js"></script>
+    <!-- Länk till AOS JavaScript-fil -->
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script>
+        // Initialize AOS
+        AOS.init();
+    </script>
 </body>
 </html>
